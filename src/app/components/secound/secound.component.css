@@ -2,3 +2,7 @@
 @import url(../../../assets/css/svuStyles.css);
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.form-value {
+    background-color: rgb(172, 171, 171)
+}
