@@ -4,24 +4,25 @@ export interface UserForm {
     Motp: number;
     Eotp: number;
   }
-
-  export interface FormData {
+  export interface CandidateFormData {
     c_firstName: string;
     c_lastName: string;
     F_name: string;
     M_name: string;
     dateOfBirth: string;
     annualIncome: string;
-    B_SD: string;
+    state: string;
+    category: string;
     B_District: string;
     gender: string;
+    className: string;
     AFC: string;
+    Qualifyingexam: string;
     mobileNumber: string;
     email: string;
-    aadharNumber: string;
+    aadharnumber: string;
     Q_Exam: string;
     Q_Medium: string;
-    Category: string;
     YOP_Qualifying: string;
     YOS_SSC: string;
     Place_SSC: string;

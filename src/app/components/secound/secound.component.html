@@ -1121,12 +1121,12 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Aadhar number</label>
           <input class="form-control" placeholder="Enter Aadhar number" id="ANo" data-type="adhaar-number"
-            maxLength="14" onchange="javascript:return validationAadhar()" [formControlName]="'aadharnumber'" [ngClass]="{
-              'is-invalid': submitted && f['aadharNumber'].errors
+            maxLength="14" [formControlName]="'aadharnumber'" [ngClass]="{
+              'is-invalid': submitted && f['aadharnumber'].errors
             }" />
           <div id="AadharError"></div>
-          <div *ngIf="submitted && f['aadharNumber'].errors" class="invalid-feedback">
-            <div *ngIf="f['aadharNumber'].hasError('required')">
+          <div *ngIf="submitted && f['aadharnumber'].errors" class="invalid-feedback">
+            <div *ngIf="f['aadharnumber'].hasError('required')">
               Aadhar Number is required
             </div>
           </div>

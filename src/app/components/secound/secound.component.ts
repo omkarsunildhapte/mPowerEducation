@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CandidateFormData } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-secound',
@@ -13,6 +14,94 @@ export class SecoundComponent {
   @ViewChild('IStudy') IStudy!: ElementRef;
   userForm: FormGroup = new FormGroup({});
   submitted = false;
+  candidate: CandidateFormData | undefined;
+  constructor(private formBuilder: FormBuilder, private el: ElementRef) {
+  }
+  ngAfterViewInit() {
+    const currentYear = new Date().getFullYear();
+    this.populateYearsDropdown(this.ddlYears.nativeElement, currentYear);
+    this.populateYearsDropdown(this.SSCStudy.nativeElement, currentYear);
+    this.populateYearsDropdown(this.IStudy.nativeElement, currentYear);
+  }
+  get f() { return this.userForm.controls; }
+
+  ngOnInit() {
+
+    document.body.className = "background-bg-1";
+    this.userForm = this.formBuilder.group({
+      c_firstName: [this.candidate?.c_firstName || '', Validators.required],
+      c_lastName: [this.candidate?.c_lastName || '', Validators.required],
+      F_name: [this.candidate?.F_name || '', Validators.required],
+      M_name: [this.candidate?.M_name || '', Validators.required],
+      dateOfBirth: [this.candidate?.dateOfBirth || '', Validators.required],
+      annualIncome: [this.candidate?.annualIncome || '', [Validators.required, Validators.pattern("^[0-9]*$")]],
+      state: [this.candidate?.state || '', Validators.required],
+      category: [this.candidate?.category || '', Validators.required],
+      B_District: [this.candidate?.B_District || '', Validators.required],
+      gender: [this.candidate?.gender || '', Validators.required],
+      className: [this.candidate?.className || '', Validators.required],
+      AFC: [this.candidate?.AFC || '', Validators.required],
+      Qualifyingexam: [this.candidate?.Qualifyingexam || '', Validators.required],
+      mobileNumber: [this.candidate?.mobileNumber || '', [Validators.required, Validators.pattern("^[0-9]{10}$")]],
+      email: [this.candidate?.email || '', [Validators.required, Validators.email]],
+      aadharnumber: [this.candidate?.aadharnumber || '', [Validators.required, Validators.pattern("^[0-9]{12}$")]],
+      Q_Exam: [this.candidate?.Q_Exam || '', Validators.required],
+      Q_Medium: [this.candidate?.Q_Medium || '', Validators.required],
+      YOP_Qualifying: [this.candidate?.YOP_Qualifying || '', Validators.required],
+      YOS_SSC: [this.candidate?.YOS_SSC || '', Validators.required],
+      Place_SSC: [this.candidate?.Place_SSC || '', Validators.required],
+      YOS_Inter: [this.candidate?.YOS_Inter || '', Validators.required],
+      Place_Inter: [this.candidate?.Place_Inter || '', Validators.required],
+      ClassesToOpt: [this.candidate?.ClassesToOpt || '', Validators.required],
+      dec_1: [this.candidate?.dec_1 || false, Validators.requiredTrue],
+      dec_2: [this.candidate?.dec_2 || false, Validators.requiredTrue]
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.userForm.valid) {
+      console.log(this.userForm.value);
+    } else {
+      this.validateAllFormFields(this.userForm);
+    }
+  }
+
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      } else {
+      }
+    });
+  }
+
+  onChangeState() {
+    const state = this.stateSelect.nativeElement.value;
+    const districts = document.querySelectorAll('.dist');
+    districts.forEach((district) => {
+      if (district instanceof HTMLElement) {
+        district.style.display = 'none';
+      }
+    });
+    if (state) {
+      const districtSelector = `.${state}`;
+      const district = document.querySelector(districtSelector);
+      if (district instanceof HTMLElement) {
+        district.style.display = 'block';
+      }
+    }
+  }
+
+  private populateYearsDropdown(element: HTMLElement, currentYear: number) {
+    for (let i = 1950; i <= currentYear; i++) {
+      const option = document.createElement('option');
+      option.innerHTML = i.toString();
+      option.value = i.toString();
+      element.appendChild(option);
+    }
+  }
   states: string[] = [
     'Andhra Pradesh',
     'Arunachal Pradesh',
@@ -71,88 +160,4 @@ export class SecoundComponent {
     { value: 'offline', label: 'Offline SV University Campus' },
     { value: 'online', label: 'Online' },
   ];
-  constructor(private formBuilder: FormBuilder, private el: ElementRef) {
-  }
-  ngAfterViewInit() {
-    const currentYear = new Date().getFullYear();
-    this.populateYearsDropdown(this.ddlYears.nativeElement, currentYear);
-    this.populateYearsDropdown(this.SSCStudy.nativeElement, currentYear);
-    this.populateYearsDropdown(this.IStudy.nativeElement, currentYear);
-  }
-  get f() { return this.userForm.controls; }
-
-  ngOnInit() {
-    document.body.className = "background-bg-1";
-    this.userForm = this.formBuilder.group({
-      c_firstName: ['', Validators.required],
-      c_lastName: ['', Validators.required],
-      F_name: ['', Validators.required],
-      M_name: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
-      annualIncome: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
-      state: ['', Validators.required],
-      B_District: ['', Validators.required],
-      gender: ['', Validators.required],
-      AFC: ['', Validators.required],
-      mobileNumber: ['', [Validators.required, Validators.pattern("^[0-9]{10}$")]],
-      email: ['', [Validators.required, Validators.email]],
-      aadharNumber: ['', [Validators.required, Validators.pattern("^[0-9]{12}$")]],
-      Q_Exam: ['', Validators.required],
-      Q_Medium: ['', Validators.required],
-      Category: ['', Validators.required],
-      YOP_Qualifying: ['', Validators.required],
-      YOS_SSC: ['', Validators.required],
-      Place_SSC: ['', Validators.required],
-      YOS_Inter: ['', Validators.required],
-      Place_Inter: ['', Validators.required],
-      ClassesToOpt: ['', Validators.required],
-      dec_1: [false, Validators.requiredTrue],
-      dec_2: [false, Validators.requiredTrue]
-    });
-  }
-
-  onSubmit() {
-    this.submitted = true;
-    if (this.userForm.valid) {
-      console.log(this.userForm.value);
-    } else {
-      this.validateAllFormFields(this.userForm);
-    }
-  }
-
-  validateAllFormFields(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach(field => {
-      const control = formGroup.get(field);
-      if (control instanceof FormGroup) {
-        this.validateAllFormFields(control);
-      } else {
-      }
-    });
-  }
-
-  onChangeState() {
-    const state = this.stateSelect.nativeElement.value;
-    const districts = document.querySelectorAll('.dist');
-    districts.forEach((district) => {
-      if (district instanceof HTMLElement) {
-        district.style.display = 'none';
-      }
-    });
-    if (state) {
-      const districtSelector = `.${state}`;
-      const district = document.querySelector(districtSelector);
-      if (district instanceof HTMLElement) {
-        district.style.display = 'block';
-      }
-    }
-  }
-
-  private populateYearsDropdown(element: HTMLElement, currentYear: number) {
-    for (let i = 1950; i <= currentYear; i++) {
-      const option = document.createElement('option');
-      option.innerHTML = i.toString();
-      option.value = i.toString();
-      element.appendChild(option);
-    }
-  }
 }
