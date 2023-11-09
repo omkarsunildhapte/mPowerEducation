@@ -1,0 +1,1039 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .firstheadernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2b386b;
+    color: #fff;
+    height: 44px;
+  }
+  .header-top-area {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+  }
+  /* .linames {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 21rem;
+    margin-top: -3rem;
+    color: #fff;
+    font-weight: bold;
+  } */
+  .headlinks1 {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+    margin-right: 15rem;
+    margin-top: -4rem;
+    float: right;
+    font-weight: bold;
+  }
+  /* .issues{
+    float: right;
+    font-size: small;
+    margin-top: -1rem;
+    color: black;
+  } */
+  .nav {
+    display: inline-flex;
+  }
+  
+  .headlinks2 {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+    margin-right: 10rem;
+    margin-top: -4rem;
+    float: right;
+    font-weight: bold;
+  }
+  /* .topnav{
+    text-decoration: none;
+    color: #fff;
+  } */
+  /* .iconbuzz{
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: 5px;
+    color: #d09402;
+  } */
+  .profilepic-loading {
+    text-align: center;
+    position: relative;
+    right: 1rem;
+    float: right;
+    width: 8.7rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #00000038;
+  }
+  .clear {
+    clear: both;
+  }
+  .btn-round {
+    border-radius: 2rem;
+    width: 100px;
+  }
+  .container-checkbg {
+    height: 100vh;
+    max-width: 90vw !important ;
+  }
+  .profilepic-loading > img {
+    width: 100%;
+  }
+  .billdesk-icon {
+    width: 120px;
+  }
+  .container-fluid-bg {
+    background-image: url(".../../assets/images/newwatermarkupdated.jpeg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .container {
+    max-width: 90vw !important ;
+  }
+  .modal-dialog {
+    margin-top: 16rem;
+  }
+  body {
+    font-size: 90%;
+  }
+  
+  body {
+    background-image: url(".../../assets/images/newbg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .card-container {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 0;
+    border-radius: 5px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    margin-top: 3rem;
+  }
+  .d-flex {
+    margin-top: 3rem;
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    justify-content: start;
+    align-items: start;
+  }
+  
+  h5,
+  h6,
+  h3 {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 0.6em;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  
+  .btn {
+    font-size: 0.9em;
+  }
+  
+  .mt-1 {
+    margin-top: 0;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  /* header {
+    background-color: #fff;
+    padding: 3px;
+    height: 102px;
+    color: #fff;
+  } */
+  
+  /* Logo styles */
+  .logo-svu {
+    max-width: 300px;
+    float: left;
+    height: 80px;
+  }
+  .logo-exf {
+    margin: 8px;
+    float: right;
+    height: 50px;
+  }
+  /* .card {
+    border: 2px solid black;
+    background-color: rgb(189, 230, 94); 
+    width: auto;
+    margin-left: 50vw; 
+   position: absolute;
+    left: 82%;
+    top: 99%;
+    transform: translate(-50%, -50%);
+  } */
+  
+  nav {
+    background-color: #2b386b;
+    color: #fff;
+    margin: 0%;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+  }
+  
+  nav ul ul li {
+    display: block;
+  }
+  
+  .headerleft {
+    text-align: left !important;
+    width: fit-content;
+  }
+  .samename {
+    /* margin-right: 20rem; */
+    text-align: right !important;
+    display: inline-block;
+    width: fit-content;
+    /* text-align: right;
+    width: calc(100% - 122px);
+    vertical-align: middle; */
+  }
+  
+  .navigation {
+    /* display: flex;
+    
+  
+    justify-content: center;
+    align-items: space-between; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+  
+    /* background-color: rgb(13, 6, 45); */
+  }
+  .input-tags {
+    /* width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; */
+  
+    /* align-items: baseline; */
+    /* justify-content: space-around; */
+    /* vertical-align: sub; */
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .button {
+    padding: 12px;
+    background-color: rgb(85 218 255);
+    /* border: 2px solid black; */
+    border-radius: 4px;
+  }
+  
+  .input-tags-text {
+    border-radius: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* display: block; */
+    /* width: 100%; */
+    padding: 10px;
+    /* justify-items: flex-start; */
+    align-items: center;
+  
+    margin-top: 6px;
+    width: 390px;
+    justify-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .input-tags-submit {
+    border-radius: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* display: block; */
+    /* width: 100%; */
+    padding: 10px;
+    /* justify-items: flex-start; */
+    align-items: center;
+  
+    margin-top: 6px;
+    width: 100px;
+    justify-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .otp-popup {
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .otp-popup-text {
+    border-radius: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* display: block; */
+    /* width: 100%; */
+    padding: 10px;
+    /* justify-items: flex-start; */
+    align-items: center;
+  
+    margin-top: 6px;
+    width: 390px;
+    justify-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .otp-popup-submit {
+    border-radius: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* display: block; */
+    /* width: 100%; */
+    padding: 10px;
+    /* justify-items: flex-start; */
+    align-items: center;
+  
+    margin-top: 6px;
+    width: 100px;
+    justify-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .input-tags-submit-receipt {
+    border-radius: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* display: block; */
+    /* width: 100%; */
+    padding: 10px;
+    /* justify-items: flex-start; */
+    align-items: center;
+  
+    margin-top: 6px;
+    width: 100px;
+    justify-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .landing-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .landing-text {
+    text-align: left;
+    color: white;
+  }
+  
+  .landing-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    margin-top: -15rem;
+    line-height: 70px;
+  }
+  
+  .landing-text h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 40px;
+  }
+  
+  .landing-text h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 70px;
+  }
+  
+  .landing-text p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* CSS for small devices (landscape phones, 576px and up) */
+  @media (max-width: 600px) {
+    /* Add your responsive CSS for small devices here */
+    .logo-container img {
+      max-width: 58%; /* Adjust the percentage as needed */
+    }
+    /* .card{
+      left: 50%;
+      top: 100%;
+      }
+    .firstheadernav{
+      display: block;
+    }
+    .linames{
+      margin-left: 10px;
+    } */
+  }
+  @media (min-width: 400px) and(max-width:560px) {
+    .logo-container img {
+      max-width: 58%; /* Adjust the percentage as needed */
+    }
+    .issues {
+      float: right;
+      font-size: small;
+      margin-top: -1rem;
+      color: black;
+    }
+    .logo-container {
+      height: 102px;
+    }
+    .headlinks1 {
+      margin-top: -2rem;
+    }
+  }
+  
+  /* CSS for medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .logo-container img {
+      max-width: 70%; /* Adjust the percentage as needed */
+    }
+    /* Add your responsive CSS for medium devices here */
+  }
+  
+  /* CSS for large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    /* Add your responsive CSS for large devices here */
+  }
+  
+  /* CSS for extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* Add your responsive CSS for extra large devices here */
+  }
+  @media (min-width: 200px) {
+    .logo-container {
+      height: 105px;
+    }
+    /* .headlinks1 {
+     margin-top: -2rem;
+    }
+    .headlinks2{
+      margin-top: -2rem;
+    } */
+  }
+  @media (min-width: 300px) and (max-width: 600px) {
+    .logo-container {
+      height: 125px;
+    }
+    .headlinks1 {
+      margin-top: -2rem;
+    }
+    .headlinks2 {
+      margin-top: -2rem;
+    }
+  }
+  /* @media (max-width:600px){
+    .card{
+    left: 50%;
+    top: 100%;
+    }
+  } */
+  
+  /* Text Animation */
+  /* @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .landing-text h1,
+  .landing-text h2,
+  .landing-text h3,
+  .landing-text p {
+    animation: fadeIn 1s forwards;
+  } */
+  /* @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+   }
+   .landing-text h1, h2, h3 {
+    animation: slideIn 1s forwards;
+   }
+   
+   h1 {
+    animation-delay: 0.5s;
+   }
+   
+   h2 {
+    animation-delay: 1s;
+   }
+   
+   h3 {
+    animation-delay: 1.5s;
+   } */
+  
+
+/* CSS Document */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Add animation styles */
+@keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-text {
+            position: relative;
+            animation: slideIn 1s forwards;
+        }
+#topbar {
+    background: #2b386b;
+    text-align: right;
+    margin: 0;
+}
+#topbar .contact-info a {
+    line-height: 0;
+    color: #fff;
+    text-align: center;
+    margin-right: 20px;
+}
+#topbar .contact-info p {
+    text-align: right;
+    color: #fff;
+    font-size: 100%;
+    padding-top: 10px;
+    line-height: 0;
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+#topbar .contact-info p {
+    font-size: 100%;
+}
+}
+
+@media only screen and (min-width: 601px) {
+#topbar .col-sm-5 {
+    width: 70%;
+}
+}
+
+@media only screen and (min-width: 601px) {
+#topbar .col-sm-7 {
+    width: 30%;
+}
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+#topbar .contact-info p {
+    font-size: 60%;
+    display: block;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#topbar .col-sm-7 {
+    width: 30%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#topbar .col-sm-3 {
+    width: 70%;
+}
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.navbar {
+    background: #2b386b;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("./assets/images/hamburgerMenu.png")
+}
+.navbar-light .navbar-toggler {
+    color: transparent;
+    border-color: none;
+}
+#brand {
+    padding: 2px 20px;
+	background: #fff;
+}
+.banner {
+  background-image: url("./assets/images/newland.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    /* background-image: url("../images/newland.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto; */
+    /* min-height: 100vh; */
+}
+.banner h1 {
+    color: #fff;
+    padding: 25px 30px 5px 20px;
+}
+.banner span {
+    color: #fff;
+    padding: 2px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.banner h3 {
+    color: #fff;
+    padding: 10px 20px 0px 20px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.banner p {
+    font-size: 20px;
+    padding: 2px 20px;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+}
+#form-container {
+    background: #fff;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 5px;
+    color: #000000;
+    margin: 30px 2px;
+    align-items: flex-end;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+	.card-header {
+	 background: #fff;	
+	}
+.form-group {
+    margin-bottom: 0.2rem;
+}
+#form-container .form-control {
+    color: #000000;
+    font-size: 16px;
+}
+.register {
+    border: 0;
+    padding: 10px 22px;
+    color: #0880e8;
+    transition: 0.4s;
+    border-radius: 50px;
+    border: 2px solid #0880e8;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+.register:hover {
+    background: #28445b;
+    color: #fff;
+}
+#footer p {
+    padding: 0;
+}
+
+/*************secondscreen css****************/
+
+.container-checkbg {
+    height: 100vh;
+    max-width: 90vw !important ;
+  }
+  .profilepic-loading > img {
+    width: 100%;
+  }
+  .billdesk-icon {
+    width: 120px;
+  }
+  .container-fluid-bg {
+    background-image: url("./assets/images/newwatermarkupdated.jpeg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .modal-dialog {
+    margin-top: 16rem;
+  }
+  
+  .background-bg {
+    background-image: url("./assets/images/newbg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    margin-top: 3rem;
+  }
+  .d-flex {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    justify-content: start;
+    align-items: start;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /*****************thirdscreen************/
+  
+.container-checkbg {
+    height: 100vh;
+    max-width: 90vw !important ;
+  }
+  .profilepic-loading > img {
+    width: 100%;
+  }
+  .billdesk-icon {
+    width: 120px;
+  }
+  .container-fluid-bg {
+    background-image: url("./assets/images/newwatermarkupdated.jpeg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .modal-dialog {
+    margin-top: 16rem;
+  }
+  
+  .background-bg {
+    background-image: url("./assets/images/newbg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    margin-top: 3rem;
+  }
+  .d-flex {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    justify-content: start;
+    align-items: start;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  /**********************success*********************/
+  .succard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px auto;
+}
+.tick {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/images/check.png');
+    background-size: cover;
+    background-position: center;
+}
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+.button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+/**********************failure css*********************/
+.flcard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px auto;
+}
+.fltick {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/images/remove.png');
+    background-size: cover;
+    background-position: center;
+}
+.flbutton2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+.d-flex {
+    margin-bottom: 0;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/*******************payments history screen css ***************************/
+.container .py-5{
+  color: white;
+  padding-bottom: 0rem!important;
+}
+
+.font{
+  font-size: 12px;
+}
+#payments {
+  background-color: #f8f9fa;
+  /* Set the background color of the payment section */
+  padding: 15px 0px 0px 0px;
+  /* Add some padding for better spacing */
+}
+#payments p {
+  color: #004995;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.table-responsive{
+  width: 100%;
+  overflow-x:auto;
+}
+
+.table.table-bordered {
+  width: 100%;
+  /* overflow-x: auto; */
+}
+
+hr{
+  margin: 7px 0;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.user-info {
+  font-family: Arial, sans-serif;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+table.table {
+  background-color: #fff;
+  width: auto;
+  /* Set the background color of the table */
+}
+
+table.table th,
+table.table td {
+  border-color: #dee2e6;
+  /* Set the border color of table cells */
+}
+
+table.table thead th {
+  /* background-color: #343a40; */
+  background-color: #1e87f0;
+color: #fff;
+/* background-image: linear-gradient(179deg, black, transparent); */
+  /* Set the background color of table headers */
+  color: #fff;
+  /* Set the text color of table headers */
+}
+
+table.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Set the background color of even rows */
+}
+
+table.table tbody tr:hover {
+  background-color: #e2e6ea;
+  /* Set the background color of hovered rows */
+}
+
+button.btn-primary1 {
+  background-color: #007bff;
+  /* Set the background color of the download button */
+  border-color: #007bff;
+  /* Set the border color of the download button */
+
+}
+
+
+button.btn1-primary:hover {
+  background-color: #0056b3;
+  /* Set the background color of the download button on hover */
+  border-color: #0056b3;
+  /* Set the border color of the download button on hover */
+}
+
+.td-class{
+  text-align: center; vertical-align: center;
+}
+
+.td-classs{
+  text-align: center;
+}
+
+.td-class img{
+  margin-left: 12px;
+}
+
+.td-classs img{
+  margin-left: 7px;
+}
