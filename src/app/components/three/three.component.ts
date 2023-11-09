@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-three',
+  templateUrl: './three.component.html',
+  styleUrls: ['./three.component.css']
+})
+export class ThreeComponent {
+  constructor(){}
+  ngOnInit(){
+    document.body.className= "background-bg-1";
+  }
+}

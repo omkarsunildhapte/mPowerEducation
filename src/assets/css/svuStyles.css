@@ -1,0 +1,483 @@
+@charset "utf-8";
+/* CSS Document */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Add animation styles */
+@keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-text {
+            position: relative;
+            animation: slideIn 1s forwards;
+        }
+#topbar {
+    background: #2b386b;
+    text-align: right;
+    margin: 0;
+}
+#topbar .contact-info a {
+    line-height: 0;
+    color: #fff;
+    text-align: center;
+    margin-right: 20px;
+}
+#topbar .contact-info p {
+    text-align: right;
+    color: #fff;
+    font-size: 100%;
+    padding-top: 10px;
+    line-height: 0;
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+#topbar .contact-info p {
+    font-size: 100%;
+}
+}
+
+@media only screen and (min-width: 601px) {
+#topbar .col-sm-5 {
+    width: 70%;
+}
+}
+
+@media only screen and (min-width: 601px) {
+#topbar .col-sm-7 {
+    width: 30%;
+}
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+#topbar .contact-info p {
+    font-size: 60%;
+    display: block;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#topbar .col-sm-7 {
+    width: 30%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#topbar .col-sm-3 {
+    width: 70%;
+}
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.navbar {
+    background: #2b386b;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("../images/hamburgerMenu.png")
+}
+.navbar-light .navbar-toggler {
+    color: transparent;
+    border-color: none;
+}
+#brand {
+    padding: 2px 20px;
+	background: #fff;
+}
+.banner {
+  background-image: url("../images/newland.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    /* background-image: url("../images/newland.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto; */
+    /* min-height: 100vh; */
+}
+.banner h1 {
+    color: #fff;
+    padding: 25px 30px 5px 20px;
+}
+.banner span {
+    color: #fff;
+    padding: 2px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.banner h3 {
+    color: #fff;
+    padding: 10px 20px 0px 20px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.banner p {
+    font-size: 20px;
+    padding: 2px 20px;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+}
+#form-container {
+    background: #fff;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 5px;
+    color: #000000;
+    margin: 30px 2px;
+    align-items: flex-end;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+	.card-header {
+	 background: #fff;	
+	}
+.form-group {
+    margin-bottom: 0.2rem;
+}
+#form-container .form-control {
+    color: #000000;
+    font-size: 16px;
+}
+.register {
+    border: 0;
+    padding: 10px 22px;
+    color: #0880e8;
+    transition: 0.4s;
+    border-radius: 50px;
+    border: 2px solid #0880e8;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+.register:hover {
+    background: #28445b;
+    color: #fff;
+}
+#footer p {
+    padding: 0;
+}
+
+/*************secondscreen css****************/
+
+.container-checkbg {
+    height: 100vh;
+    max-width: 90vw !important ;
+  }
+  .profilepic-loading > img {
+    width: 100%;
+  }
+  .billdesk-icon {
+    width: 120px;
+  }
+  .container-fluid-bg {
+    background-image: url("../images/newwatermarkupdated.jpeg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .modal-dialog {
+    margin-top: 16rem;
+  }
+  
+  .background-bg {
+    background-image: url("../images/newbg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    margin-top: 3rem;
+  }
+  .d-flex {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    justify-content: start;
+    align-items: start;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /*****************thirdscreen************/
+  
+.container-checkbg {
+    height: 100vh;
+    max-width: 90vw !important ;
+  }
+  .profilepic-loading > img {
+    width: 100%;
+  }
+  .billdesk-icon {
+    width: 120px;
+  }
+  .container-fluid-bg {
+    background-image: url("../images/newwatermarkupdated.jpeg");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .modal-dialog {
+    margin-top: 16rem;
+  }
+  
+  .background-bg {
+    background-image: url("../images/newbg_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mb-4 {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    margin-top: 3rem;
+  }
+  .d-flex {
+    margin-bottom: 0; /* Adjusted to remove the extra space */
+    justify-content: start;
+    align-items: start;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  /**********************success*********************/
+  .succard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px auto;
+}
+.tick {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/check.png');
+    background-size: cover;
+    background-position: center;
+}
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+.button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+/**********************failure css*********************/
+.flcard {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px auto;
+}
+.fltick {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/remove.png');
+    background-size: cover;
+    background-position: center;
+}
+.flbutton2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    /* background-color: #4CAF50; */
+    color: white;
+    border: none;
+    border-radius: 65px;
+    cursor: pointer;
+}
+.d-flex {
+    margin-bottom: 0;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/*******************payments history screen css ***************************/
+.container .py-5{
+  color: white;
+  padding-bottom: 0rem!important;
+}
+
+.font{
+  font-size: 12px;
+}
+#payments {
+  background-color: #f8f9fa;
+  /* Set the background color of the payment section */
+  padding: 15px 0px 0px 0px;
+  /* Add some padding for better spacing */
+}
+#payments p {
+  color: #004995;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.table-responsive{
+  width: 100%;
+  overflow-x:auto;
+}
+
+.table.table-bordered {
+  width: 100%;
+  /* overflow-x: auto; */
+}
+
+hr{
+  margin: 7px 0;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.user-info {
+  font-family: Arial, sans-serif;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+table.table {
+  background-color: #fff;
+  width: auto;
+  /* Set the background color of the table */
+}
+
+table.table th,
+table.table td {
+  border-color: #dee2e6;
+  /* Set the border color of table cells */
+}
+
+table.table thead th {
+  /* background-color: #343a40; */
+  background-color: #1e87f0;
+color: #fff;
+/* background-image: linear-gradient(179deg, black, transparent); */
+  /* Set the background color of table headers */
+  color: #fff;
+  /* Set the text color of table headers */
+}
+
+table.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Set the background color of even rows */
+}
+
+table.table tbody tr:hover {
+  background-color: #e2e6ea;
+  /* Set the background color of hovered rows */
+}
+
+button.btn-primary1 {
+  background-color: #007bff;
+  /* Set the background color of the download button */
+  border-color: #007bff;
+  /* Set the border color of the download button */
+
+}
+
+
+button.btn1-primary:hover {
+  background-color: #0056b3;
+  /* Set the background color of the download button on hover */
+  border-color: #0056b3;
+  /* Set the border color of the download button on hover */
+}
+
+.td-class{
+  text-align: center; vertical-align: center;
+}
+
+.td-classs{
+  text-align: center;
+}
+
+.td-class img{
+  margin-left: 12px;
+}
+
+.td-classs img{
+  margin-left: 7px;
+}

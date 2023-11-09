@@ -1,0 +1,84 @@
+<div class="container-fluid banner">
+    <div class="row">
+        <div
+            class="col-xl-6 col-lg-6 col-md-12 col-sm-12 slide-in-text d-flex align-content-center text-left flex-wrap">
+            <h1>Welcome To SV University </h1>
+            <span>(Dept.Of Computer Science)</span>
+            <h1> Masters In Data Science </h1>
+            <p>An Industry Integrated Programme In Collaboration With Exafluence.Inc.USA</p>
+        </div>
+        <div class="col-xl-1 col-lg-6 col-md-12 col-sm-12"> </div>
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+            <div id="form-container">
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="register-tab" data-bs-toggle="tab"
+                                    data-bs-target="#register" type="button" role="tab" aria-controls="register"
+                                    aria-selected="true">Register</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="download-tab" data-bs-toggle="tab"
+                                    data-bs-target="#download" type="button" role="tab" aria-controls="download"
+                                    aria-selected="false">Download Fee Receipt</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="register" role="tabpanel"
+                                aria-labelledby="register-tab">
+                                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                    <div class="mb-3">
+                                        <input type="number" placeholder="Enter Mobile Number"
+                                            class="input-tags-text form-control" formControlName="mobile" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" placeholder="Enter Email Id"
+                                            class="input-tags-text form-control" formControlName="email" required />
+                                    </div>
+                                    <div class="col-sm-12 text-center mb-3">
+                                        <button type="submit" class="btn btn-primary input-tags-submit">Send
+                                            OTP</button>
+                                    </div>
+                                </form>
+
+                                <div class="otp-popup" id="otpInputs" *ngIf="showOtpInputs">
+                                    <div class="mb-3">
+                                        <input type="number" placeholder="Enter Mobile OTP"
+                                            class="otp-popup-text form-control" formControlName="Motp" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="number" placeholder="Enter Email OTP"
+                                            class="otp-popup-text form-control" formControlName="Eotp" required />
+                                    </div>
+                                    <button type="button" class="btn btn-primary otp-popup-submit"
+                                        (click)="onOtpSubmit()">Submit</button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+                                <form [formGroup]="downloadForm" (ngSubmit)="onSubmit()">
+                                    <div class="mb-3">
+                                        <input type="number" placeholder="Enter Mobile Number"
+                                            class="input-tags-text form-control" id="mobile1" formControlName="mobile"
+                                            required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" placeholder="Enter Email Id"
+                                            class="input-tags-text form-control" id="email1" formControlName="email"
+                                            required />
+                                    </div>
+                                    <div class="col-sm-12 text-center">
+                                        <button type="submit"
+                                            class="btn btn-primary align-items-center input-tags-submit-receipt">Download</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

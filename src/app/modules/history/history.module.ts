@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StudentFormComponent } from './student-form/student-form.component';
+import { HistoryComponent } from 'src/app/components/history/history.component';
 
 
 
 @NgModule({
   declarations: [
-    StudentFormComponent
+    HistoryComponent
   ],
   imports: [
     CommonModule
-  ],
-  exports: [
-    StudentFormComponent
   ]
 })
 export class HistoryModule { }

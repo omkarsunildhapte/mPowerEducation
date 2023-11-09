@@ -1,0 +1,40 @@
+<div class="form-container1" style="min-height: 75vh; display: flex; align-items: center;" *ngIf="IsSuccess">
+    <div class="succard card">
+        <div>
+            <h5>Amount: <span style="color: blue;">{{ successData.amount }}</span></h5>
+        </div>
+        <div>
+            <h6 class="text-center">Transaction ID: {{ successData.transactionId }}</h6>
+        </div>
+        <div>
+            <h6 class="bg-success mb-3 mt-3 text-white p-3 rounded">Your Transaction Success</h6>
+        </div>
+        <div class="text-center">
+            <div class="tick mb-4 mt-4"></div>
+        </div>
+        <div>
+            <button class="btn btn-primary button1" (click)="download()">Download</button>
+            <button class="btn btn-primary button2" (click)="goToHome()">Home</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-container2" style="min-height: 75vh; display: flex; align-items: center;" *ngIf="!IsSuccess">
+    <div class="flcard card">
+        <div>
+            <h5>Amount: <span style="color: blue;">{{ failureData.amount }}</span></h5>
+        </div>
+        <div>
+            <h6 class="text-center">Transaction ID: {{ failureData.transactionId }}</h6>
+        </div>
+        <div>
+            <h6 class="bg-danger mb-3 mt-3 text-white p-3 rounded">Your Transaction Failure</h6>
+        </div>
+        <div class="text-center">
+            <div class="fltick mb-4 mt-4"></div>
+        </div>
+        <div>
+            <button class="btn btn-primary flbutton2" (click)="goToHome()">Home</button>
+        </div>
+    </div>
+</div>

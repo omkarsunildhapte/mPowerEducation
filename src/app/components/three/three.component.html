@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="container-fluid-bg p-3 mt-5 mb-5">
+        <div class="container-fluid-bg p-3 mt-5">
+            <div class="row mb-3">
+                <div class="col-md-6 col-sm-12">
+                    <h4 class="text-primary">Student Summary</h4>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Admission /Role No.: </div>
+                        <div class="col-sm-12 col-md-6">SVUEXF20230007</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Student Name: </div>
+                        <div class="col-sm-12 col-md-6">Saikumar B</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Father's Name: </div>
+                        <div class="col-sm-12 col-md-6">Krishna Rao</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Gender: </div>
+                        <div class="col-sm-12 col-md-6">male</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">DOB: </div>
+                        <div class="col-sm-12 col-md-6">25-08-2000</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Phone: </div>
+                        <div class="col-sm-12 col-md-6">8974565855</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Email: </div>
+                        <div class="col-sm-12 col-md-6">test&#64;gmail.com</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Course: </div>
+                        <div class="col-sm-12 col-md-6">MS Data-science</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Certification: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Certification Details: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Amount: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h4 class="text-primary">Fee Summary</h4>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Certificate Fee: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Late Fee: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">GST(18%): </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-6">Total: </div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <button class="btn btn-primary m-1 btn-round" id="backbtn">
+                        BACK
+                    </button>
+                    <button class="btn btn-secondary m-1 btn-round" onclick="javascript:return submitCancel()"
+                        id="cancelbtn">
+                        CANCEL
+                    </button>
+                    <button class="btn btn-primary m-1 btn-round" data-toggle="modal" data-target="#exampleModal"
+                        id="submitbtn">
+                        PROCEED
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Select Payment Gateway
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="radio" checked="true" />
+                                    <img src="../../../assets/images/billdesk.jpg" class="billdesk-icon" />
+                                    <div class="text-danger">
+                                        Transactions charges are free for UPI and PuPay Debit Card
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        CANCEL
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        PROCEED
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

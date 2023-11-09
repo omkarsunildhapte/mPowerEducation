@@ -1,0 +1,99 @@
+<div class="container mb-2">
+    <div class="container py-5" style="color: white;">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="user-card align-items-center justify-content-center">
+                    <img [src]="user.userImage" height="100" width="100" class="d-block" id="userImage">
+                    <div class="user-info">
+                        <div class="user-name"><span id="johnDoe">{{ user.userName }}</span></div>
+                        <div class="user-id"><span id="userId">{{ user.userId }}</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 font" style="font-size: 13px;">
+                <div class="row mb-2">
+                    <div class="col-md-6"><strong>Branch Name:</strong><span id="branchName">{{ user.branchName
+                            }}</span></div>
+                    <div class="col-md-6"><strong>Academic Year:</strong><span id="academicYear">{{ user.academicYear
+                            }}</span></div>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-md-6"><strong>Admission Number:</strong><span id="addmissionNumber">{{
+                            user.admissionNumber }}</span></div>
+                    <div class="col-md-6"><strong>Date of Birth:</strong><span id="dob">{{ user.dob }}</span></div>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-md-6"><strong>Father's Name:</strong><span id="fathersName">{{ user.fathersName
+                            }}</span></div>
+                    <div class="col-md-6"><strong>Mother's Name:</strong><span id="mothersName">{{ user.mothersName
+                            }}</span></div>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-md-6"><strong>Mobile Number:</strong><span id="mobileNumber">{{ user.mobileNumber
+                            }}</span></div>
+                    <div class="col-md-6"><strong>Email ID:</strong><span id="emailID">{{ user.emailID }}</span></div>
+                </div>
+                <hr>
+                <div class="row mb-2">
+                    <div class="col-md-6"><strong>Course:</strong><span id="course">{{ user.course }}</span></div>
+                    <div class="col-md-6"><strong>Semester:</strong><span id="semester">{{ user.semester }}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row align-items-start">
+        <div class="col-md-12 mx-auto">
+            <section id="payments">
+                <p>Payment History</p>
+                <div class="container ">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="paymentHistoryTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction Id</th>
+                                    <th>Transaction Type</th>
+                                    <th>Amount</th>
+                                    <th>Payment Source</th>
+                                    <th>Status</th>
+                                    <th>Invoice</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let transaction of transactions">
+                                    <td>{{ transaction.date | date }}</td>
+                                    <td>{{ transaction.transactionId }}</td>
+                                    <td>{{ transaction.transactionType }}</td>
+                                    <td>{{ transaction.amount | currency:'INR' }}</td>
+                                    <td>{{ transaction.paymentSource }}</td>
+                                    <td class="td-class">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img [src]="transaction.status === 'Success' ? '../../../assets/images/success.png' : '../../../assets/images/fail.png'"
+                                                height="30" width="30" class="d-block">
+                                        </div>
+                                        {{ transaction.status }}
+                                    </td>
+                                    <td class="td-classs">
+                                        <a [href]="'invoice' + transaction.invoice + '.pdf'" target="_blank">
+                                            <i class="fa fa-eye d-block pt-1 pb-1"></i>View
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            Download
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
