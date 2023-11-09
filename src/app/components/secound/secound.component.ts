@@ -26,7 +26,13 @@ export class SecoundComponent {
   get f() { return this.userForm.controls; }
 
   ngOnInit() {
-
+    this.userForm?.valueChanges.subscribe((data: any) => {
+      for (var key in data) {
+        if (data[key] && data[key].toString().trim() == "") {
+          this.userForm?.get(key)?.setValue("", { emitEvent: false });
+        }
+      }
+    });
     document.body.className = "background-bg-1";
     this.userForm = this.formBuilder.group({
       c_firstName: [this.candidate?.c_firstName || '', Validators.required],
