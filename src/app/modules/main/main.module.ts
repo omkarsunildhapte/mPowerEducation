@@ -6,6 +6,8 @@ import { FirstScreenComponent } from 'src/app/components/first-screen/first-scre
 import { SecoundComponent } from 'src/app/components/secound/secound.component';
 import { ThreeComponent } from 'src/app/components/three/three.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +15,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaymentResponseComponent,
     FirstScreenComponent,
     SecoundComponent,
-    ThreeComponent
+    ThreeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class MainModule { }

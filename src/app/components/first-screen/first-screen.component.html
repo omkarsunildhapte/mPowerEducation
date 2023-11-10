@@ -8,7 +8,7 @@
             <p>An Industry Integrated Programme In Collaboration With Exafluence.Inc.USA</p>
         </div>
         <div class="col-xl-1 col-lg-6 col-md-12 col-sm-12"> </div>
-        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-5">
             <div id="form-container">
                 <div class="card">
                     <div class="card-header">
@@ -29,14 +29,28 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="register" role="tabpanel"
                                 aria-labelledby="register-tab">
-                                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
                                     <div class="mb-3">
-                                        <input type="number" placeholder="Enter Mobile Number"
-                                            class="input-tags-text form-control" formControlName="mobile" required />
-                                    </div>
+                                        <input
+                                          type="number"
+                                          maxlength="10"
+                                          placeholder="Enter Mobile Number"
+                                          class="input-tags-text form-control"
+                                          formControlName="mobile"
+                                          [ngClass]="{ 'is-invalid': submitted && f['mobile']?.errors }" />
+                                        <div *ngIf="submitted && f['mobile']?.errors" class="invalid-feedback">
+                                            <div *ngIf="f['mobile']?.errors?.['required']">Mobile No is required</div>
+                                        </div>
+                                      </div>
+                                      
+                                      
                                     <div class="mb-3">
                                         <input type="email" placeholder="Enter Email Id"
-                                            class="input-tags-text form-control" formControlName="email" required />
+                                            class="input-tags-text form-control" formControlName="email" 
+                                            [ngClass]="{ 'is-invalid': submitted && f['email']?.errors }"  />
+                                            <div *ngIf="submitted && f['email']?.errors" class="invalid-feedback">
+                                                <div *ngIf="f['email']?.errors?.['required']">Email is required</div>
+                                            </div>
                                     </div>
                                     <div class="col-sm-12 text-center mb-3">
                                         <button type="submit" class="btn btn-primary input-tags-submit">Send
@@ -58,11 +72,14 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
-                                <form [formGroup]="downloadForm" (ngSubmit)="onSubmit()">
+                                <form [formGroup]="downloadForm" (ngSubmit)="onClickSubmit()">
                                     <div class="mb-3">
                                         <input type="number" placeholder="Enter Mobile Number"
-                                            class="input-tags-text form-control" id="mobile1" formControlName="mobile"
-                                            required />
+                                            class="input-tags-text form-control" id="mobile1" formControlName="mobile1"
+                                            [ngClass]="{ 'is-invalid': submitted && g['mobile1']?.errors }" />
+                                            <div *ngIf="submitted && g['mobile1']?.errors" class="invalid-feedback">
+                                                <div *ngIf="g['mobile1']?.errors?.['required']">Mobile No is required</div>
+                                            </div>
                                     </div>
                                     <div class="mb-3">
                                         <input type="email" placeholder="Enter Email Id"

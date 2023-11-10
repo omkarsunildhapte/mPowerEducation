@@ -18,6 +18,7 @@ const routes: Routes = [
       { path: 'payment-response/:IsSuccess', component: PaymentResponseComponent },
       { path: 'secound', component: SecoundComponent },
       { path: 'three', component: ThreeComponent },
+      { path: '',redirectTo: "first-screen", pathMatch: 'full'}
     ]
   }
 ];
