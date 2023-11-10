@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { HistoryCheckService } from 'src/app/history-check.service';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +9,14 @@ import { filter } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  showCourseAndPaymentTabs: boolean = true;
+  isHistoryRoute: boolean = true;
 
-  constructor( private router: Router, private activatedRoute: ActivatedRoute){
-    this.router.events
-    .pipe(filter(event => event instanceof NavigationEnd))
-    .subscribe(() => {
-      // Check the current route and set showCourseAndPaymentTabs accordingly
-      this.showCourseAndPaymentTabs = !this.isHistoryRoute();
+  constructor(private historyCheckService: HistoryCheckService) { }
+
+  ngOnInit() {
+    this.historyCheckService.isHistoryRoute$.subscribe(value => {
+      this.isHistoryRoute = value;
+      debugger
     });
-
-}
-isHistoryRoute(): boolean {
-  return this.activatedRoute.snapshot.url.some(segment => segment.path === 'history');
-}
+  }
 }

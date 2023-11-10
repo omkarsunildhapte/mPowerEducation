@@ -29,14 +29,14 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"> <a class="nav-link active cursor-pointer" aria-current="page"
                             routerLink="/student/first-screen">Home</a> </li>
-                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#"
+                    <li class="nav-item dropdown" *ngIf="isHistoryRoute"> <a class="nav-link dropdown-toggle" href="#"
                             id="navbarDropdownCourse" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Course </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownCourse">
                             <li><a class="dropdown-item" href="#">Masters in Data science</a></li>
                         </ul>
                     </li>
-                    <li  class="nav-item dropdown" *ngIf="showCourseAndPaymentTabs">
+                    <li class="nav-item dropdown" *ngIf="isHistoryRoute">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPayment" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false"> Payment </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownPayment">
