@@ -80,7 +80,10 @@
                                     <div class="mb-3">
                                         <input type="email" placeholder="Enter Email Id"
                                             class="input-tags-text form-control" id="email1" formControlName="email"
-                                            required />
+                                            [ngClass]="{ 'is-invalid': submitted && g['email'].errors }" required />
+                                        <div *ngIf="submitted && g['email']?.errors" class="invalid-feedback">
+                                            <div *ngIf="g['email']?.errors?.['required']">Mobile No is required</div>
+                                        </div>
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <button type="submit"

@@ -31,8 +31,8 @@ export class FirstScreenComponent {
     document.body.className = "background-bg-1";
   }
 
-  get f() { return this.registerForm.controls; }
-  get g() { return this.downloadForm.controls; }
+  get f() { return this.registerForm.controls; };
+  get g() { return this.downloadForm.controls; };
 
 
   onRegister() {
@@ -53,7 +53,7 @@ export class FirstScreenComponent {
     }
   }
 
-  onClickSubmit(){
+  onClickSubmit() {
     this.submitted = true;
     if (this.downloadForm.valid) {
     }
