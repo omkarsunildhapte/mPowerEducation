@@ -9,8 +9,20 @@ import { HistoryCheckService } from './history-check.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router: Router, private historyCheckService: HistoryCheckService) { }
+  showCourseAndPaymentTabs: boolean = true;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private historyCheckService: HistoryCheckService) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        debugger
+        // Check the current route and set showCourseAndPaymentTabs accordingly
+        this.showCourseAndPaymentTabs = !this.isHistoryRoute();
+      });
 
+  }
+  isHistoryRoute(): boolean {
+    return location.href.includes('history')
+  }
   ngOnInit() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)

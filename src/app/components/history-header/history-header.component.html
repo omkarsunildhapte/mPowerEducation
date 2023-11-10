@@ -27,32 +27,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active cursor-pointer" aria-current="page"
-                            (click)="navigateToFirstScreen()">Home</a>
-                    </li>
-                    <li class="nav-item dropdown" *ngIf="isHistoryRoutes">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCourse" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Course
-                        </a>
+                    <li class="nav-item"> <a class="nav-link active cursor-pointer" aria-current="page"
+                            routerLink="/student/first-screen">Home</a> </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#"
+                            id="navbarDropdownCourse" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Course </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownCourse">
                             <li><a class="dropdown-item" href="#">Masters in Data science</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown" *ngIf="isHistoryRoutes">
+                    <li  class="nav-item dropdown" *ngIf="showCourseAndPaymentTabs">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPayment" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Payment
-                        </a>
+                            data-bs-toggle="dropdown" aria-expanded="false"> Payment </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownPayment">
-                            <li><a class="dropdown-item" (click)="navigateToPaymentResponse()">Masters in Data science
-                                    Entrance exam</a></li>
+                            <li><a class="dropdown-item" routerLink="/student/payment-response/1">Masters in Data
+                                    science Entrance exam</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="navigateToHistory()">History</a>
-                    </li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="/student/history">History</a> </li>
+                    <!-- <li class="nav-item"> <a class="nav-link"
+                  href="#social">Contact Us</a> </li> -->
                 </ul>
             </div>
         </div>

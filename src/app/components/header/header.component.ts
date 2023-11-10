@@ -9,17 +9,23 @@ import { HistoryCheckService } from 'src/app/history-check.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isHistoryRoute: boolean = true;
+  isHistoryRoutes: boolean = true;
+  showCourseAndPaymentTabs: boolean = true;
 
   constructor(private historyCheckService: HistoryCheckService, private router: Router) { }
 
   ngOnInit() {
     this.historyCheckService.isHistoryRoute$.subscribe(value => {
-      this.isHistoryRoute = value;
+      this.isHistoryRoutes = value;
     });
   }
+
   navigateToFirstScreen() {
     this.router.navigate(['/student/first-screen']);
+  }
+
+  isHistoryRoute() {
+    return location.href.includes('history');
   }
 
   navigateToPaymentResponse() {

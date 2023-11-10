@@ -64,4 +64,5 @@ export class HistoryComponent {
     document.body.className = "background-bg-1";
   }
 
+
 }
