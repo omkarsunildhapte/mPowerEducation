@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student-master',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class StudentMasterComponent {
 
+  constructor(private activatedRoute: ActivatedRoute) { }
+  isHistoryRoute(): boolean {
+    return location.href.includes('history')
+  }
 }

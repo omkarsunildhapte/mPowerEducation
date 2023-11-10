@@ -20,6 +20,6 @@ export class HeaderComponent {
 
 }
 isHistoryRoute(): boolean {
-  return this.activatedRoute.snapshot.url.some(segment => segment.path === 'history');
+  return location.href.includes('history')
 }
 }

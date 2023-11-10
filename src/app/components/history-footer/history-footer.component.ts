@@ -3,12 +3,11 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-history-footer',
+  templateUrl: './history-footer.component.html',
+  styleUrls: ['./history-footer.component.css']
 })
-export class AppComponent {
-  title = 'mPowerEducation';
+export class HistoryFooterComponent {
   showCourseAndPaymentTabs: boolean = true;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
@@ -22,6 +21,6 @@ export class AppComponent {
 
   }
   isHistoryRoute(): boolean {
-    return location.href.includes('history')
+    return location.href.includes('history');
   }
 }
