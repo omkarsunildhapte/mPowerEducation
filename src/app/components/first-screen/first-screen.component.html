@@ -58,10 +58,16 @@
                                     <div class="mb-3">
                                         <input type="number" placeholder="Enter Mobile OTP"
                                             class="otp-popup-text form-control" formControlName="Motp" required />
+                                        <div *ngIf="submitted && f['Motp']?.errors" class="invalid-feedback">
+                                            <div *ngIf="f['Motp']?.errors?.['required']">Mobile Otp is required</div>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <input type="number" placeholder="Enter Email OTP"
                                             class="otp-popup-text form-control" formControlName="Eotp" required />
+                                        <div *ngIf="submitted && f['email']?.errors" class="invalid-feedback">
+                                            <div *ngIf="f['email']?.errors?.['required']">Email is required</div>
+                                        </div>
                                     </div>
                                     <button type="button" class="btn btn-primary otp-popup-submit"
                                         (click)="onOtpSubmit()">Submit</button>
